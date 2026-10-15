@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Core Palette from Reference UI */
+  --bg-outer: #E5E4E0;
+  --bg-canvas: #FAF9F6;
+  --bg-surface: #F3F2EE;
+  --bg-card: #FFFFFF;
+  --bg-card-subtle: #F7F6F2;
+
+  /* Signature Coral / Terracotta Accents */
+  --coral: #DF6042;
+  --coral-hover: #CC5033;
+  --coral-light: #F3B3A3;
+  --coral-soft: #FADCD4;
+  --coral-tint: #FDF2EF;
+  --coral-gradient: linear-gradient(135deg, #E66A4C 0%, #D95436 100%);
+
+  /* Charcoal / Jet Black Contrast */
+  --ink: #141414;
+  --ink-soft: #262626;
+  --text-primary: #141414;
+  --text-secondary: #6E6D6A;
+  --text-muted: #9E9C98;
+  --text-placeholder: #B8B6B1;
+
+  /* Semantic Status Colors */
+  --success: #2A9D6E;
+  --error: #D94838;
+  --warning: #E07A3C;
+
+  /* Borders & Shadows */
+  --border: #ECEAE4;
+  --border-strong: #E0DDD6;
+  --shadow-xs: 0 2px 8px rgba(20, 20, 20, 0.03);
+  --shadow-sm: 0 6px 20px rgba(20, 20, 20, 0.04);
+  --shadow-md: 0 12px 32px rgba(20, 20, 20, 0.05);
+  --shadow-lg: 0 24px 60px rgba(20, 20, 20, 0.08);
+  --shadow-coral: 0 8px 22px rgba(223, 96, 66, 0.28);
+
+  /* Radii & Spacing */
+  --radius-sm: 12px;
+  --radius: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 30px;
+  --radius-shell: 36px;
+  --radius-pill: 9999px;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--bg-outer);
+  color: var(--text-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+input, select, textarea {
+  font-family: inherit;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}

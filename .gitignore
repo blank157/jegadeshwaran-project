@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+
+# Build output
+target/
+build/
+dist/
+
+# Local databases
+*.db
+*.mv.db
+*.lock.db
+
+# Environment / secrets
+.env.local
+.env.*.local
+*.pem
+
+# Logs
+*.log
+npm-debug.log*
+yarn-error.log*
+
+# IDE / OS
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
+
+# Build caches
+.cache/
+.eslintcache

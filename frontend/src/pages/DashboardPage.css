@@ -1,0 +1,851 @@
+.bento-dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.bento-alert-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  background: var(--coral-tint);
+  border: 1px solid var(--coral-soft);
+  border-radius: var(--radius);
+  color: var(--coral-hover);
+  font-size: 13.5px;
+  font-weight: 500;
+}
+
+.bento-card {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  padding: 22px 24px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(20, 20, 20, 0.03);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.muted-caption {
+  display: block;
+  font-size: 11.5px;
+  color: var(--text-muted);
+  font-weight: 400;
+  margin-bottom: 4px;
+}
+
+.pill-select-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  background: var(--bg-card-subtle);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* TOP BENTO GRID */
+.bento-top-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1.15fr 145px 1.35fr;
+  gap: 20px;
+  align-items: stretch;
+}
+
+/* 1. SWIFT Corridor Card (VISA Direct Debits equivalent) */
+.swift-corridor-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: linear-gradient(180deg, #FFFFFF 0%, #F9F8F5 100%);
+  padding: 24px;
+}
+
+.corridor-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+.swift-fin-mark {
+  font-size: 14px;
+  font-weight: 800;
+  font-style: italic;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+}
+
+.corridor-account-block {
+  margin-bottom: 18px;
+}
+
+.masked-bic-number {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: 0.02em;
+}
+
+.corridor-action-pills {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--border);
+}
+
+.corridor-btn {
+  padding: 10px 16px;
+  font-size: 12.5px;
+}
+
+.corridor-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 18px;
+}
+
+.corridor-fee-val {
+  font-size: 19px;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.coral-action-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11.5px;
+  font-weight: 500;
+  color: var(--coral);
+  line-height: 1.25;
+}
+
+.coral-circle-mini {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--coral);
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+/* 2. Middle Stacked Totals */
+.bento-middle-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.metric-split-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.metric-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.metric-icon-badge {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--bg-card-subtle);
+  border: 1px solid var(--border);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+  font-size: 14px;
+}
+
+.metric-big-number {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.03em;
+}
+
+.metric-sub-inline {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.metric-row-between {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+/* 3. Center Circular Widgets Column */
+.bento-circles-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.system-lock-circle {
+  width: 136px;
+  height: 136px;
+  border-radius: 50%;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.system-lock-circle:hover {
+  transform: scale(1.03);
+}
+
+.lock-icon-wrap {
+  font-size: 18px;
+}
+
+.lock-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.dark-gauge-circle {
+  width: 136px;
+  height: 136px;
+  border-radius: 50%;
+  background: var(--ink);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-md);
+}
+
+.gauge-svg {
+  width: 122px;
+  height: 122px;
+}
+
+.gauge-center-text {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+}
+
+.gauge-pct {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.gauge-sub {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* 4. Right Cluster */
+.bento-right-cluster {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.bento-right-mini-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.mini-days-card,
+.mini-grid-card {
+  padding: 18px;
+  background: var(--bg-card-subtle);
+}
+
+.mini-card-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  margin-bottom: 12px;
+  box-shadow: var(--shadow-xs);
+}
+
+.mini-days-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.mini-days-sub {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.coral-dot-matrix {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 5px;
+}
+
+.matrix-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #DFDDD7;
+}
+
+.matrix-dot.filled {
+  background: var(--coral);
+}
+
+.grid-Comparing-visual {
+  position: relative;
+  height: 92px;
+  background-image:
+    linear-gradient(to right, rgba(0,0,0,0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0,0,0,0.04) 1px, transparent 1px);
+  background-size: 22px 22px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 8px;
+}
+
+.compare-pill {
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  font-size: 11px;
+  font-weight: 600;
+  z-index: 2;
+}
+
+.compare-pill-muted {
+  background: #E2E0DA;
+  color: var(--text-primary);
+  margin-top: 12px;
+}
+
+.compare-pill-coral {
+  background: var(--coral);
+  color: #ffffff;
+  margin-top: -18px;
+}
+
+/* Wave Chart Card */
+.wave-stocks-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.wave-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wave-card-amount {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+
+.wave-svg-wrap {
+  height: 64px;
+  margin: 8px -24px;
+}
+
+.coral-wave-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.wave-card-bottom {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.wave-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+/* BOTTOM BENTO GRID */
+.bento-bottom-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr 0.95fr;
+  gap: 20px;
+  align-items: stretch;
+}
+
+.bento-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.bento-card-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+/* 1. Concentric Coral Circles Card */
+.concentric-profits-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.concentric-rings-stage {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-top: 8px;
+}
+
+.concentric-ring {
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding-top: 14px;
+  transition: transform 0.2s ease;
+}
+
+.ring-4 {
+  width: 230px;
+  height: 230px;
+  background: #F9E5DF;
+}
+
+.ring-3 {
+  width: 180px;
+  height: 180px;
+  background: #F3C7BA;
+}
+
+.ring-2 {
+  width: 132px;
+  height: 132px;
+  background: #EA9B86;
+}
+
+.ring-1 {
+  width: 82px;
+  height: 82px;
+  background: var(--coral);
+  justify-content: center;
+  padding-top: 0;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(223, 96, 66, 0.35);
+}
+
+.ring-1:hover {
+  transform: scale(1.05);
+}
+
+.ring-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: auto;
+}
+
+.ring-core-label {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+}
+
+/* 2. Activity Manager Card */
+.activity-manager-card {
+  background: var(--bg-card-subtle);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.activity-header-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mini-ctrl-btn {
+  width: 34px;
+  height: 34px;
+  font-size: 13px;
+}
+
+.activity-search-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+
+.activity-search-input-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  min-width: 160px;
+}
+
+.search-glyph {
+  font-size: 13px;
+  opacity: 0.6;
+}
+
+.activity-search-input-wrap input {
+  border: none;
+  background: transparent;
+  font-size: 13px;
+  color: var(--text-primary);
+  outline: none;
+  width: 100%;
+}
+
+.activity-filter-chips {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.chip-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border);
+  background: #ffffff;
+  font-size: 11.5px;
+  font-weight: 500;
+  color: var(--text-primary);
+  transition: all 0.15s ease;
+}
+
+.chip-pill.active {
+  border-color: var(--coral);
+  background: var(--coral-tint);
+}
+
+.chip-coral-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--coral);
+}
+
+.activity-inner-trio {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.activity-subcard {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 18px;
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 210px;
+}
+
+.subcard-amount {
+  font-size: 21px;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.03em;
+}
+
+.subcard-ccy {
+  font-size: 11px;
+  color: var(--text-muted);
+  font-weight: 500;
+  margin-left: 4px;
+}
+
+.equalizer-bars {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 76px;
+  gap: 6px;
+  margin: 14px 0;
+}
+
+.eq-bar-track {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.eq-bar-fill {
+  width: 3px;
+  border-radius: 4px;
+}
+
+.eq-bar-fill.coral {
+  background: var(--coral);
+}
+
+.eq-bar-fill.dark {
+  background: var(--ink);
+}
+
+.subcard-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.subcard-dots .dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #D8D6D0;
+}
+
+.subcard-dots .dot.active-pill {
+  width: 14px;
+  border-radius: 10px;
+  background: var(--coral);
+}
+
+.subcard-dots .dot.dark-pill {
+  width: 14px;
+  border-radius: 10px;
+  background: var(--ink);
+}
+
+.subcard-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.subcard-title {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.subcard-more {
+  color: var(--text-muted);
+  font-weight: 700;
+}
+
+.corridor-timeline-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+}
+
+.Timeline-node-item,
+.timeline-node-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 8px;
+  border-radius: 12px;
+  background: var(--bg-card-subtle);
+  transition: background 0.15s ease;
+}
+
+.timeline-node-item:hover {
+  background: var(--coral-tint);
+}
+
+.timeline-coral-icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--coral);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.timeline-node-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+  overflow: hidden;
+}
+
+.timeline-node-text strong {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.timeline-node-text small {
+  font-size: 10.5px;
+  color: var(--text-muted);
+}
+
+.verification-subcard {
+  align-items: flex-start;
+}
+
+.sunburst-svg-wrap {
+  margin-bottom: 6px;
+}
+
+.subcard-desc {
+  font-size: 11.5px;
+  color: var(--text-muted);
+  line-height: 1.45;
+  margin: 4px 0 12px;
+}
+
+.full-pill-btn {
+  width: 100%;
+  padding: 10px;
+}
+
+/* 3. Right Review / Compliance Card */
+.review-rating-card {
+  background: var(--bg-card-subtle);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.review-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.review-question {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+  margin-bottom: 6px;
+}
+
+.review-disclaimer {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.tag-Quick-pills {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  padding-top: 12px;
+}
+
+.tag-circle-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-xs);
+  transition: all 0.2s ease;
+}
+
+.tag-circle-btn:hover {
+  background: var(--coral);
+  color: #ffffff;
+  border-color: var(--coral);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 1200px) {
+  .bento-top-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .bento-circles-col {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .bento-bottom-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .bento-top-grid {
+    grid-template-columns: 1fr;
+  }
+  .activity-inner-trio {
+    grid-template-columns: 1fr;
+  }
+}
